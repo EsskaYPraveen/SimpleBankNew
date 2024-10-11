@@ -1,0 +1,40 @@
+version: "2"
+sql:
+  - schema:
+      - "db/migration"      
+      - "db/schema/schema.sql"    # Path to your database schema file
+    queries: "db/query"       # Path to your SQL queries
+    engine: "postgresql"         # Database engine (e.g., postgresql, mysql)
+    gen:
+      go:
+        package: "db"            # The package name for generated Go code
+        emit_json_tags: true
+        out: "/db/"       # Output directory for generated files
+
+
+
+# C:\Users\psabhini\learngo\simplebank:/src
+
+#docker run --rm -v "C:\Users\psabhini\learngo\simplebank:/src" -w /src sqlc/sqlc ls /src/db/query
+
+# docker run --rm -v "%C:\Users\psabhini\learngo\simplebank%:/src" -w /src sqlc/sqlc ls /src/db/query
+
+# docker run --rm -v "%C:\Users\learngo\simplebank%:/src" -w /src generate
+#Unable to find image 'generate:latest' locally
+
+# docker run --rm -v "C:/Users/psabhini/learngo/simplebank:/src" -w /src sqlc/sqlc generate
+# docker run --rm -v "C:/Users/psabhini/learngo/simplebank:/src" -w /src sqlc/sqlc generate
+
+
+# docker run --rm -v "C:/Users/learngo/simplebank:/src" -w /src sqlc/sqlc ls /src/db/query
+
+# docker run --rm -v "C:/Users/psabhini/learngo/simplebank:/src" -w /src sqlc/sqlc ls /src/db/query
+
+# docker run --rm -v "C:/Users/psabhini/learngo/simplebank:/src" -w /src alpine ls -l db/query
+
+# docker run --rm -it -v "C:/Users/psabhini/learngo/simplebank:/src" -w /src alpine /bin/sh
+
+
+
+
+
